@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+:root {
+    --o-color: #2FB9D2;
+    --x-color: #3687D3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SUSE", sans-serif;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    max-width: 100%;
+}
+.hidden {
+    display: none !important;
+}
+html, body {
+    height: 100%;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 15px;
+}
+
+header {
+    margin: 0 40px;
+}
+#header__list {
+    display: flex;
+    justify-content: space-between;
+}
+.header__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.header__item i {
+    font-size: 24px;
+}
+.fa-xmark {
+    color: var(--x-color);
+}
+.fa-circle {
+    color: var(--o-color);
+}
+.fa-scale-balanced {
+    color: #9C9C9C;
+}
+.header__item span {
+    font-size: 14px;
+}
+
+main {
+    margin: 35px 0;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-gap: 1px;
+    background-color: #ccc;
+}
+.board__div {
+    aspect-ratio: 1;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+}
+.board__div i {
+    font-size: 12px;
+}
+
+#role {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+#role span {
+    padding: 4px 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #9C9C9C;
+}
+
+footer {
+    display: grid;
+    place-items: center;
+}
+footer button {
+    color: #fff;
+    font-size: 30px;
+    background-color: #A4B5B8;
+    padding: 10px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    header {
+        margin: 0;
+    }
+    #header__list {
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+    main {
+        flex: 1;
+    }
+    .board__div i {
+        font-size: 20px;
+    }
+}
